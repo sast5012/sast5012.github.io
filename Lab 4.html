@@ -1,0 +1,75 @@
+<!-- Do not include these comments in your HTML file. I provide them here for instruction purposes -->
+<!-- I suggest using the html5 doctype. We could also get away with xhtml 1.0 Strict or or html 4.1 Strict for the “Doctype”; but because of the increasing support for html 5 in browsers and its additional semantic elements, we’re going to use it in the projects for this class -->
+<!-- See http://www.w3.org/QA/2002/04/valid-dtd-list.html for list of valid doctypes -->
+<!-- There's also a good article, though a bit old, at http://www.alistapart.com/articles/doctype/ -->
+<!--------------------------------------------------------------------------------------------------->
+<!------------- HTML5 DOCTYPE ---------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<!----------------------------->
+<head>
+<meta charset="utf-8" />
+<title>Enter a title for your document</title>
+<!-- A link to the external style sheet would usually go here but we’ll address this later. For this assignment we’re just working on the structure --> 
+<!--enable HTML5 elements in IE7+IE8 -->
+<!-- [if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js”></script>
+<![endif]-->
+</head>
+
+<!-- The heart of the code for you site - the stuff that appears in the -->
+<!-- browser will go in the body section -->
+
+<body>
+
+<!--Before html5 we would have divided the sections of the page up using "divs" -->
+<!--However we’ll use the new semantic elements provided with HTML 5 such as -->
+<!--“header”, “footer”, "nav”, etc., instead -->
+<!-- We will also be using WAI-ARIA roles to add more semantic meaning to our code. Example WAI-ARIA roles are “banner”, “main”, “search” and “form”. WAI-ARIA is the acronym for Web Access Initiative – Accessible Rich Internet Applications. We will talk more about WAI-ARIA and the new HTML 5 semantic elements in more detail later in the course, particularly in Module 13. For now note that WAI-ARIA and the new HTML 5 semantic element assist both Assistive Technologies (such as screenreaders), search engines and other code-reading technologies to navigate and understand the identify the meaning of a page. -->
+
+<header role="banner">  
+
+
+<img src="images/logoTBA.png" alt="DS Redesign logo" />
+<!-- Enter the text what will go in your top banner -->
+<p>Banner Text - should this be a heading</p> <!-- Should this be a header; you decide -->
+</header>
+
+
+
+<nav role="navigation">
+<ul> <!-- navigation is usually coded as an unordered list -->
+<!--DO NOT simply enter “menu item 1”, etc. Enter the text for the menu items you plan to include on your redesigned page!! -->
+<li>menu item 1</li>
+<li>menu item 2</li>
+<li>menu item 3</li>
+<li>menu item 4</li>
+</ul>
+<!-- continue as needed depending on the number of menu items -->
+</nav>
+
+<div role="search">
+<!-- note: until we create the search.php file, we'll get an error when we submit a search -->
+<form action="search.php" method="post" id="searchinput">
+<label for="search">Search:</label>
+<input id="search" type="text" name="searchfield" />
+<input type="submit" value="submit" />
+</form>
+</div> <!-- end search div -->
+
+
+<div role="main">
+<!-- enter the text or a summary of the text that will go in the main content -->
+<h1>Header for Main Content</h1>
+
+<p>text for main content</p>
+</div> <!-- end main content div -->
+
+<footer>
+<h2>Heading for footer section</h2>
+<img src="images/footerimageTBA.png" alt="Footer image TBA" />
+<p>Additional text for footer section</p>
+</footer>
+
+</body>
+</html>
